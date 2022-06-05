@@ -1,6 +1,6 @@
 <template>
           <Button/>
-        <div class="row row_extra">
+        <div class="row row_extra delivery_top">
           <div class="col-lg-4">
             <!-- Delivery -->
             <Deli/>
@@ -24,5 +24,7 @@ props: [ 'money' ]
 </script>
 
 <style>
-
+.delivery_top{
+  padding-top: 40px;
+}
 </style>

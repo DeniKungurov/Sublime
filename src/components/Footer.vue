@@ -1,12 +1,5 @@
 <template>
-  <div class="footer_overlay"></div>
     <footer class="footer">
-      <div
-        class="footer_background"
-        style="
-          background-image: url(https://raw.githack.com/SergioElCringe/JS_step_2/init/PROJECT/BASE__PROJECT/img/footer.jpg);
-        "
-      ></div>
       <div class="container">
         <div class="row">
           <div class="col">
@@ -58,8 +51,9 @@ export default {
 </script>
 
 <style>
-.footer_overlay{
+.footer{
   background-image: url(../assets/img/footer.jpg);
   background-size: cover;
+  /* z-index: 5; */
 }
 </style>

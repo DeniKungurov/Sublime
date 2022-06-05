@@ -1,4 +1,4 @@
-# kungurov
+# kungurov_vue
 
 ## Project setup
 ```
@@ -17,6 +17,3 @@ npm run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-#� �S�u�b�l�i�m�e�
-�
-�

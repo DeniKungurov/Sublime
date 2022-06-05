@@ -8,7 +8,7 @@
         <h1>Cart</h1>
       </div>
             <!-- Cart Item -->
-            <div class="cartCart">
+      <div class="cartCart">
         <cartItem v-for="item of items"
         :key="item.id"
         :item="item"
@@ -60,7 +60,7 @@ export default {
 </script>
 <style>
 .cart {
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 3%;
   border-bottom: 3px solid black;
   background-image: url(https://raw.githubusercontent.com/SergioElCringe/JS_step_1/main/BASE__PROJECT/images/avds_large.jpg);
@@ -69,6 +69,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
 }
 .cartCart{
   margin-bottom: 5%;

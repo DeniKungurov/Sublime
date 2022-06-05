@@ -3,7 +3,7 @@
     <div class="avds_background"></div>
     <div class="avds_small_inner">
       <div class="avds_discount_container">
-        <img src="../../../../assets/img/discount.png" alt="" />
+        <img src="https://raw.githubusercontent.com/DeniKungurov/Sublime/Sublime_1/src/assets/img/discount.png" alt="" />
         <div>
           <div class="avds_discount">
             <div>20<span>%</span></div>
