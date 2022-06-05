@@ -24,4 +24,7 @@ export default {
 </script>
 
 <style>
+.avds_large{
+background-image: url('https://raw.githubusercontent.com/DeniKungurov/Sublime/Sublime_1/src/assets/img/avds_large.jpg');
+}
 </style>

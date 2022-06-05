@@ -13,31 +13,34 @@ export default {
           try{
             const data = await cart.getCart();
           commit('setCartItems', data);
-          console.log(this.state.Cart.items)
+          commit('howMoney');
           }
           catch(err) {
               console.log(err)
           }
       },
 
-//getCartPost
-      async addItem({ commit }, item ) {
-          const { imgUrl, name, price, id } = item;
+      async addItem({ commit ,state }, item ) {
+          console.log(item)
+          const { imgUrl, name, price, id, Productvalue } = item;
           const find = this.state.Cart.items.find(cartItem => cartItem.id === id);
           try {
             if (!find) {
-              const newItem = await { imgUrl, name, price, id, amount: 1 };
+              const newItem = await { imgUrl, name, price, id, amount : (!Productvalue ? 1 : Productvalue) };
               if(imgUrl){
-                const data = await cart.getCartPost(newItem);
-            //const data = await $api.send(this.state.Cart.urlCart, 'POST', newItem);
+            const data = await $api.send(this.state.Cart.urlCart, 'POST', newItem);
               if (!data.error) {
                   this.state.Cart.items.push(newItem);
               }
             }
             } else {
-            const data = await $api.send(this.state.Cart.urlCart, 'PUT', { value: 1 }, id);
+            const data = await $api.send(this.state.Cart.urlCart, 'PUT', { value: (!Productvalue ? 1 : Productvalue) }, id);
               if (!data.error) {
-                find.amount++;
+                if(!Productvalue) {
+                  find.amount++
+                }else{
+                  find.amount = find.amount + Productvalue
+                }
               }
           }
         }			
@@ -72,7 +75,6 @@ export default {
     this.state.Cart.money = 0;
     await this.state.Cart.items.find((el) => {
               this.state.Cart.money += el.price * el.amount;
-              console.log(this.state.Cart.money)
       });
   }
   },

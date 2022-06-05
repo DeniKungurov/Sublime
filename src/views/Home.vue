@@ -4,7 +4,7 @@
 
     <Ads/>
 
-    <Catalog/>
+    <Catalog :query="query"/>
 
 	<Ad/>
 
@@ -17,6 +17,8 @@ import Ads from '../componentsPage/homeComponents/Ads/ads.vue'
 import Carusel from '../componentsPage/homeComponents/Carusel/carusel.vue'
 import Ad from '../componentsPage/homeComponents/ad/ad.vue'
 import IconBox from '../componentsPage/homeComponents/iconBoxes/IconBox.vue'
+
+
 export default {
     name: 'Home', 
     components: {
@@ -24,7 +26,17 @@ export default {
         Ads,
         Carusel,
         Ad,
-        IconBox
+        IconBox,
+    },
+    data() {
+        return {
+            query: {
+            filter: 'category',
+            page: 1,
+            show: 3,
+            sort: 'ad',
+        }
+        }
     }
 }
 </script>

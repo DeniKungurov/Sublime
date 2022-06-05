@@ -1,25 +1,25 @@
 <template>
- <div class="super_container">
-
-	<Header />
-
-	<router-view />
-
-  <Footer/>
-
-</div>
+<div class="super_container">
+  <v-app>
+    <Header />
+    <v-main>
+      <router-view/>
+    </v-main>
+  </v-app>
+  </div>
+      <Footer/>
 </template>
-
 
 <script>
 import Footer from './components/Footer.vue';
 import Header from './components/Header.vue'
 
 export default {
-  components: {
-    Header,
-    Footer
-  },
+  name: 'App',
+   components: { Header, Footer },
+  data: () => ({
+    //
+  }),
 }
 </script>
 <style lang="scss">
